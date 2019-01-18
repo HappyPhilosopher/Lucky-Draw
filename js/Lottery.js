@@ -77,8 +77,8 @@
                         alert(`${text}!`);
                     } else {
                         alert(`恭喜您获得${text}！`);
-                        flag = true;
                     }
+                    flag = true;
                 }, 500);
             }
             
