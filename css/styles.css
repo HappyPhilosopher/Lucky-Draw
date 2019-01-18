@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    border: 1px solid #000;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px auto;
+}
+
+.item, 
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ff0000;
+    box-sizing: border-box;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+.bgc-red {
+    background-color: #ff0000;
+}
