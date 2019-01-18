@@ -2,7 +2,6 @@
 (function() {
     let that = null;  // 绑定 this
     let num = 0;  // 记录初始化 speed 值
-    let flag = true;  //开闭器
 
     class Lottery {
         constructor(selector, param) {
@@ -32,7 +31,7 @@
             });
             this.cycle = 0;  // 初始化周期数，因为抽奖开始后会改变周期数
             this.speed = num;  // 初始化速度
-            // this.prize = Math.floor(Math.random() * this.itemArr.length);
+            // 为奖品附加概率值
             let randomNum = Math.floor(Math.random() * 100 + 1);
             let limitValueObj = this.getLimitValue();
             limitValueObj.forEach((item, index) => {
@@ -44,6 +43,7 @@
         }
 
         roll() {
+            flag = false;
             /* 绕按钮做环绕运动。每绕一周记录一次周期。 */
             this.curPoint++;
             if (this.curPoint > this.itemArr.length - 1) {
@@ -77,6 +77,7 @@
                         alert(`${text}!`);
                     } else {
                         alert(`恭喜您获得${text}！`);
+                        flag = true;
                     }
                 }, 500);
             }

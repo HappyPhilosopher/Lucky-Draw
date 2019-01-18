@@ -22,6 +22,7 @@
 
     <script src="./js/Lottery.js"></script>
     <script>
+        let flag = true;
         let lottery =  new Lottery('.container', {
             speed: 400,  // 定时器速度，当抽奖周期达到一定数值时加速或减速
             /* 最大、最小速度，定时器时间值越小速度越快 */
@@ -45,7 +46,11 @@
         });
         let btn = document.querySelector('.btn');
         btn.addEventListener('click', function() {
-            lottery.init();
+            if (flag) {
+                lottery.init();
+            } else {
+                return false;
+            }
         }, false);
     </script>
 </body>
