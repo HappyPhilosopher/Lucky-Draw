@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lucky Draw</title>
     <link rel="stylesheet" href="./css/styles.css">
@@ -21,37 +21,5 @@
     </div>
 
     <script src="./js/Lottery.js"></script>
-    <script>
-        let flag = true;
-        let lottery =  new Lottery('.container', {
-            speed: 400,  // 定时器速度，当抽奖周期达到一定数值时加速或减速
-            /* 最大、最小速度，定时器时间值越小速度越快 */
-            maxSpeed: 50,
-            minSpeed: 500,
-            acceleration: 40,  // 加速度
-            targetCycle: 6,  // 目标周期，当到达目标周期后，与 prize 值一起确定最终停止位置
-            speedUpCycle: 3,  // 加速周期，运行周期小于它则加速
-            speedDownCycle: 5,  //减速周期，运行周期大于它则减速
-            probability: {
-                first: '1%',
-                second: '3%',
-                third: '6%',
-                fourth: '10%',
-                fifth: '15',
-                sixth: '20%',
-                seventh: '20%',
-                eighth: '25%'
-            }
-
-        });
-        let btn = document.querySelector('.btn');
-        btn.addEventListener('click', function() {
-            if (flag) {
-                lottery.init();
-            } else {
-                return false;
-            }
-        }, false);
-    </script>
 </body>
 </html>

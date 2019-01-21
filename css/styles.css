@@ -6,7 +6,6 @@
 .container {
     width: 600px;
     height: 600px;
-    border: 1px solid #000;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -30,6 +29,6 @@
     background-color: #ccc;
 }
 
-.bgc-red {
+.active {
     background-color: #ff0000;
 }
