@@ -104,11 +104,11 @@
                 numArr.push(Number.parseInt(this.param.probability[key]) * 0.01 * 100);  //百分制
             }
             // numArr 按从小到大排序
-            numArr.sort((min, max) => {
+            /* numArr.sort((min, max) => {
                 return min - max;
-            });
+            }); */
 
-            // 存放最大、最小范围的对象
+            // 存放最大、最小范围的对象，不考虑概率为零的情况
             let objArr = [];
             objArr[0] = {min: 1, max: 1};
             function getRange(arr) {
