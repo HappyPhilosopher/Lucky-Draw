@@ -33,6 +33,7 @@
             this.speed = num;  // 初始化速度
             // 为奖品附加概率值
             let randomNum = Math.floor(Math.random() * 100 + 1);
+            console.log(randomNum);
             let limitValueObj = this.getLimitValue();
             limitValueObj.forEach((item, index) => {
                 if (randomNum >= item.min && randomNum <= item.max) {
